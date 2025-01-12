@@ -26,6 +26,7 @@ if (!isset($_SESSION['username'])) {
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
     crossorigin="anonymous"
     />
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
     <style>
@@ -66,12 +67,16 @@ if (!isset($_SESSION['username'])) {
             <li class="nav-item">
               <a class="nav-link" href="admin.php?page=article">Article</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.php?page=index">Homepage</a>
+            </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle text-dark fw-bold" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   <?= $_SESSION['username']?>
                   </a>
                   <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="logout.php">Logout</a></li> 
+                  <li><a class="dropdown-item" class="nav-link" href="admin.php?page=profil">Profile</a></li>
+                    <li><a class="dropdown-item" class="nav-link" href="logout.php">Logout</a></li> 
                 </ul>
                 </li>
             </ul>
@@ -103,9 +108,9 @@ if (!isset($_SESSION['username'])) {
 <!-- footer begin -->
 <footer class="text-center p-5 footer fixed-bottom" style="background-color:deepskyblue">
     <div>
-        <a href="https://www.instagram.com/sulaksana.hs_"><i class="bi bi-instagram h2 p-2 text-dark"></i></a>
+        <a href="https://www.instagram.com/dngadhh_"><i class="bi bi-instagram h2 p-2 text-dark"></i></a>
         <a href="https://twitter.com/udinusofficial"><i class="bi bi-twitter h2 p-2 text-dark"></i></a>
-        <a href="https://wa.me/+6288215297329"><i class="bi bi-whatsapp h2 p-2 text-dark"></i></a>
+        <a href="https://wa.me/+6281368250239"><i class="bi bi-whatsapp h2 p-2 text-dark"></i></a>
     </div>
     <div>Danang Ade Hidayat &copy; 2024</div>
 </footer>

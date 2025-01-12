@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 29, 2024 at 10:52 PM
--- Server version: 10.4.32-MariaDB
--- PHP Version: 8.2.12
+-- Waktu pembuatan: 12 Jan 2025 pada 11.41
+-- Versi server: 10.4.32-MariaDB
+-- Versi PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `article`
+-- Struktur dari tabel `article`
 --
 
 CREATE TABLE `article` (
@@ -37,40 +37,81 @@ CREATE TABLE `article` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `article`
+-- Dumping data untuk tabel `article`
 --
 
 INSERT INTO `article` (`id`, `judul`, `isi`, `gambar`, `tanggal`, `username`) VALUES
-(1, 'Poster dengan Konsep kabinet Progressive', 'Ini adalah hasil design saya ketika saya berada di divisi medkref', 'poster.jpg', '2024-12-30 12:00:00', 'admin'),
-(2, 'Foto Divisi BEM FIK', 'ini adalah hasil Photography saya ketika memotret Foto Divisi untuk kebutuhan feeds instagram BEM FIK', 'foto.jpg', '2024-12-30 12:00:05', 'admin'),
-(3, 'Teaser Oprec BEM FIK', 'Proses pembuatan video teaser open recruitment BEM FIK UDINUS. Di sini saya diposisikan sebagai penanggung jawab pembuatan video teaser dari kepanitiaan publikasi dan dokumentasi open recruitment BEM FIK', 'teaser.jpg', '2024-12-30 12:00:10', 'admin');
+(1, 'Poster dengan konsep kabinet Progressive', 'ini adalah hasil design saya ketika saya berada di devisi medkref', 'poster.jpg', '2024-12-01 12:00:00', 'admin'),
+(2, 'Foto devisi BEM FIK', 'ini adalah hasil Photography saya ketika memotret foto Divisi untuk kebutuhan feeds intagram BEM FIK', 'foto.jpg', '2024-12-01 12:10:00', 'admin'),
+(3, 'Teaser Oprec BEM FIK', 'Proses pembuatan video teaser OPREC BEM FIK Udinus. Disini saya diposisikan sebagai penanggung jawab pembuatan video teaser dari kepanitiaan publikasi dan dokumentasi OPREC BEM FIK', 'teaser.jpg', '2024-12-01 12:20:00', 'admin'),
+(5, 'Poster FIK FAIR 2024', 'ini adalah hasil kerja saya ketika di amanahkan sebagai Koordinator Publikasi dan Dokumentasi FIK FAIR 2024', '20250112150953.png', '2025-01-12 15:09:53', 'admin'),
+(6, 'Teaser Fixcup 5.0', 'Ini adalah teaser yang telah saya buat untuk event FIXCUP 5.0', '20250112145848.png', '2025-01-12 14:58:48', 'admin'),
+(7, 'Teaser LKMM-TD FIK', 'Ini Teaser LKMM-TD FIK yang telah saya buat pada bulan kemarin. Teaser ini bertema Game Zelda yang dimana sekelompok mahasiswa sedang mencari permasalahn pada berkas yang tertolak.', '20250112150049.png', '2025-01-12 15:00:49', 'admin'),
+(8, 'Poster Promosi Tenant FIK FAIR', 'Ini juga salah satu hasil saya pada saat menjadi Koordinator Publikasi dan Dokumentasi di FIK FAIR 2024. Poster ini merupakan poster promosi tenan/stand jualan pada FIK FAIR 2024', '20250112150640.png', '2025-01-12 15:06:40', 'admin'),
+(9, 'Feeds Pribadi', 'Feeds personal yang menceritakan tentang keluarga', '20250112173243.png', '2025-01-12 17:32:43', 'admin');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `gallery`
+-- Struktur dari tabel `gallery`
 --
 
 CREATE TABLE `gallery` (
   `id` int(11) NOT NULL,
   `nama` varchar(255) NOT NULL,
-  `deskrispi` text DEFAULT NULL,
-  `tanggal` date NOT NULL
+  `deskripsi` text DEFAULT NULL,
+  `tanggal` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `gallery`
+-- Dumping data untuk tabel `gallery`
 --
 
-INSERT INTO `gallery` (`id`, `nama`, `deskrispi`, `tanggal`) VALUES
-(1, 'Poster', 'Ini adalah hasil design saya ketika saya berada di divisi medkref', '2024-12-30'),
-(2, 'Foto', 'ini adalah hasil Photography saya ketika memotret Foto Divisi untuk kebutuhan feeds instagram BEM FIK', '2024-12-30'),
-(3, 'Teaser', 'Proses pembuatan video teaser open recruitment BEM FIK UDINUS. Di sini saya diposisikan sebagai penanggung jawab pembuatan video teaser dari kepanitiaan publikasi dan dokumentasi open recruitment BEM FIK', '2024-12-30');
+INSERT INTO `gallery` (`id`, `nama`, `deskripsi`, `tanggal`) VALUES
+(1, 'Poster', 'Ini adalah hasil design saya ketika saya berada di devisi medkref', '2024-12-01 12:00:00'),
+(2, 'Foto', 'ini adalah hasil Photography saya ketika memotret foto Divisi untuk kebutuhan feeds intagram BEM FIK', '2024-12-01 12:10:00'),
+(3, 'Teaser', 'Proses pembuatan video teaser OPREC BEM FIK Udinus. Disini saya diposisikan sebagai penanggung jawab pembuatan video teaser dari kepanitiaan publikasi dan dokumentasi OPREC BEM FIK', '2024-12-01 12:20:00'),
+(4, 'Workshop', NULL, '2025-01-12 10:58:36'),
+(5, 'Special Perfom', NULL, '2025-01-12 11:00:22'),
+(6, 'Fik School battle', NULL, '2025-01-12 11:00:50'),
+(7, 'Foto kabinet', NULL, '2025-01-12 11:01:08');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user`
+-- Struktur dari tabel `profil`
+--
+
+CREATE TABLE `profil` (
+  `id` int(11) NOT NULL,
+  `username` varchar(50) NOT NULL,
+  `foto` varchar(250) DEFAULT NULL,
+  `password` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data untuk tabel `profil`
+--
+
+INSERT INTO `profil` (`id`, `username`, `foto`, `password`) VALUES
+(1, 'dudung', 'DSC06971.JPG', 'e10adc3949ba59abbe56e057f20f883e'),
+(2, 'admin', 'spiderman.jpeg', 'e10adc3949ba59abbe56e057f20f883e');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `profile`
+--
+
+CREATE TABLE `profile` (
+  `Ganti password` int(11) NOT NULL,
+  `Ganti foto Profile` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `user`
 --
 
 CREATE TABLE `user` (
@@ -81,52 +122,64 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `user`
+-- Dumping data untuk tabel `user`
 --
 
 INSERT INTO `user` (`id`, `username`, `password`, `foto`) VALUES
-(1, 'admin', 'ab56b4d92b40713acc5af89985d4b786', '');
+(1, 'admin', 'e10adc3949ba59abbe56e057f20f883e', '');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `article`
+-- Indeks untuk tabel `article`
 --
 ALTER TABLE `article`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `gallery`
+-- Indeks untuk tabel `gallery`
 --
 ALTER TABLE `gallery`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `user`
+-- Indeks untuk tabel `profil`
+--
+ALTER TABLE `profil`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `user`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `article`
+-- AUTO_INCREMENT untuk tabel `article`
 --
 ALTER TABLE `article`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
--- AUTO_INCREMENT for table `gallery`
+-- AUTO_INCREMENT untuk tabel `gallery`
 --
 ALTER TABLE `gallery`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT for table `user`
+-- AUTO_INCREMENT untuk tabel `profil`
+--
+ALTER TABLE `profil`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT untuk tabel `user`
 --
 ALTER TABLE `user`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;

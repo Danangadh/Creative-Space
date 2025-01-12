@@ -11,6 +11,20 @@ include "koneksi.php";
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="shortcut icon" href="https://e7.pngegg.com/pngimages/731/937/png-clipart-jumpman-logo-blue-pencil-pencil-blue-angle.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css"rel="stylesheet"/>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    
+    
+    
+
 </head>
 <body class="bg-light text-dark" id="pageBody">
 
@@ -118,23 +132,54 @@ include "koneksi.php";
 <!-- article end -->
 
 <!-- gallery awal -->
-<section id="gallery" class="isi text-center p-5" style="background-color: deepskyblue;">
+
+ <!-- contoh-->
+ <section id="gallery" class="isi text-center p-5" style="background-color: deepskyblue;">
     <div class="container">
         <h1 class="fw-bold display-4 pb-3">Gallery</h1>
-        <div id="carouselExample" class="carousel slide">
+        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner d-flex justify-content-center"> 
+                <!-- Carousel Item 1 -->
                 <div class="carousel-item active w-75 mx-auto"> 
                     <div class="ratio ratio-16x9">
-                        <div class="carousel-item active">
-                            <img
-                                src="img/foto-kabinet.png"
-                                class="d-block w-100"
-                                alt="..."
-                            />
-                        </div>  
+                        <img
+                            src="img/foto-kabinet.png"
+                            class="d-block w-100"
+                            alt="Foto Kabinet"
+                        />
+                    </div>
+                </div>
+                <!-- Carousel Item 2 -->
+                <div class="carousel-item w-75 mx-auto"> 
+                    <div class="ratio ratio-16x9">
+                        <img
+                            src="img/foto-3.png"
+                            class="d-block w-100"
+                            alt=""
+                        />
+                    </div>
+                </div>
+                
+                <div class="carousel-item w-75 mx-auto">
+                    <div class="ratio ratio-16x9">
+                        <img
+                            src="img/foto-1.jpg"
+                            class="d-block w-100"
+                            alt="Gambar Lain"
+                        />
+                    </div>
+                </div>
+                <div class="carousel-item w-75 mx-auto">
+                    <div class="ratio ratio-16x9">
+                        <img
+                            src="img/foto-2.jpg"
+                            class="d-block w-100"
+                            alt="Gambar Lain"
+                        />
                     </div>
                 </div>
             </div>
+            <!-- Tombol Prev -->
             <button
                 class="carousel-control-prev"
                 type="button"
@@ -144,6 +189,7 @@ include "koneksi.php";
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
             </button>
+            <!-- Tombol Next -->
             <button
                 class="carousel-control-next"
                 type="button"
@@ -156,6 +202,8 @@ include "koneksi.php";
         </div>
     </div>
 </section>
+
+
 <!-- gallery akhir -->
 
 
